@@ -21,6 +21,6 @@ Description: A vite project that uses react with full functionality and simulate
 
 **Live Site:** [Add your deployment link here]
 
-**GitHub Repository:** [https://github.com/Sabataj616/news-explorer-frontend]
+**GitHub Repository:** [https://github.com/Sabataj616/se_news-explorer-frontend]
 
-**Project Pitch Video:** [https://www.loom.com/share/80cb977ece1b4fea8e3a6c5b309973a7]
+**Project Pitch Video:** [https://drive.google.com/file/d/1W0FWqgQ5Cl0Ws-RZku-nj4-6bHanm-DL/view?usp=sharing]
