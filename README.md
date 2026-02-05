@@ -19,7 +19,7 @@ Description: A vite project that uses react with full functionality and simulate
 - Responsive design
 - Form validation
 
-**Live Site:** [Add your deployment link here]
+**Live Site:** [https://sabataj616.github.io/se_news-explorer-frontend/]
 
 **GitHub Repository:** [https://github.com/Sabataj616/se_news-explorer-frontend]
 
