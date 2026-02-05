@@ -6,7 +6,7 @@ import "./vendor/fonts.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/se_news-explorer-frontend">
       <App />
     </BrowserRouter>
   </React.StrictMode>
