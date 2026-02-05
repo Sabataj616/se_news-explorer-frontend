@@ -1,0 +1,203 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2vh 0 1.5vh;
+  justify-content: space-between;
+  position: relative;
+  background: transparent;
+}
+
+.header--saved-news {
+  background: white;
+}
+
+.header--saved-news::after {
+  background-color: black;
+}
+
+.header--dropdown {
+  display: none;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  right: -5%;
+  height: 1px;
+  background-color: #ffffff33;
+}
+
+.header--saved-news::after {
+  background-color: #d1d2d6;
+}
+.header__logo {
+  margin-left: 6.5rem;
+}
+
+.header__sign-in-container {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  justify-content: flex-end;
+  margin-right: 5.5rem;
+}
+
+.header__sign-in-btn {
+  padding: 0.75rem 3.5rem;
+
+  border-radius: 100px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 24px;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.header__username-btn {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  gap: 0.7rem;
+  border-radius: 100px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.header__username-btn-saved-news {
+  color: black;
+  border: 1px solid black;
+}
+.header__logout-btn {
+  cursor: pointer;
+}
+
+.header__menu-btn {
+  display: none;
+}
+.header__modal-close-btn {
+  display: none;
+}
+
+.header__dropdown {
+  display: none;
+}
+
+.menu__white-close-btn {
+  display: none;
+}
+.header__dropdown-btn {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .header {
+    max-width: 768px;
+    min-height: 56px;
+  }
+  
+  .header__sign-in-container {
+    display: none;
+  }
+
+  
+  .header__menu-btn {
+    display: block;
+    margin-right: 1rem;
+    margin-top: -6px;
+    max-width: 24px;
+    min-height: 24px;
+  }
+  .menu__white-close-btn {
+    display: block;
+    background-image: url(../../assets/back.png);
+    margin-right: 1rem;
+    margin-top: -6px;
+    max-width: 24px;
+    min-height: 24px;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  .header__logo {
+    margin-left: 1rem;
+    max-width: 117px;
+  }
+
+  .header__modal-close-btn {
+    display: block;
+    margin-right: 1rem;
+    margin-top: -6px;
+    max-width: 24px;
+    min-height: 24px;
+  }
+
+  .header--dropdown-version {
+    background-color: #1a1b22;
+  }
+
+  .header__dropdown {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    justify-content: space-between;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1a1b22;
+    z-index: 1000;
+    min-height: 180px;
+  }
+
+  .header__dropdown-btn {
+    max-width: 90vw;
+    width: 288px;
+    background-color: transparent;
+    min-height: 56px;
+    border: solid white;
+    color: white;
+    border-radius: 100px;
+    outline: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .header__dropdown-link {
+    border: none;
+    color: white;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 56px;
+  }
+}

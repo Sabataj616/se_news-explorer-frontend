@@ -1,0 +1,154 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal_opened {
+  visibility: visible;
+}
+
+.modal__white-close-btn {
+  position: relative;
+  top: -70px;
+  left: 400px;
+  background-image: url(../../assets/back.png);
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.mobile__modal-close-btn {
+  display: none;
+}
+.modal__form-container {
+  background-color: white;
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 30px;
+
+  max-width: 430px;
+  max-height: 458px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -32px;
+}
+
+.modal__title {
+  margin-bottom: 60px;
+  margin-top: -32px;
+  color: #1a1b22;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.modal__label {
+  max-width: 66px;
+  height: 14px;
+  
+}
+
+
+.modal__submit-btn_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__submit-btn {
+  color: white;
+  background-color: #2f71e5;
+  max-width: 360px;
+  height: 64px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  padding: 0;
+  margin-right: -1px;
+  cursor: pointer;
+  gap: 16px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal__submit-btn:hover {
+  opacity: 0.8;
+}
+
+.modal__submit-btn_disabled {
+  opacity: 50%;
+  margin: 12px 0;
+}
+
+.modal__submit-btn_toggle {
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 400;
+  leading-trim: NONE;
+  margin-bottom: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2f71e5;
+  height: 20px;
+}
+
+.modal__submit-btn_toggle:hover {
+  color: black;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .modal__form-container {
+    margin-top: 75px;
+    min-height: 500px;
+  }
+
+  .modal__white-close-btn {
+    display: none;
+  }
+
+  .mobile__modal-close-btn {
+    display: block;
+    position: relative;
+    top: -75px;
+    left: 230px;
+    background-image: url(../../assets/back.png);
+    max-width: 90vw;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    padding: 1rem;
+  }
+}

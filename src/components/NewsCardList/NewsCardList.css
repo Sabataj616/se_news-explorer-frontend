@@ -1,0 +1,12 @@
+.news-card-list {
+  display: flex;
+  gap: 3vw;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.news__search-results {
+  height: 46px;
+}
