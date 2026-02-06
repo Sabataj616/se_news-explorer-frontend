@@ -1,6 +1,6 @@
 import "./SearchForm.css";
 import { useLocation } from "react-router-dom";
-import { getNews } from "../../utils/NewsApi";
+import { getNews } from "../../utils/newsApi";
 import { getDateRange } from "../../utils/dateApi";
 import { useForm } from "../../hooks/useForm";
 import { useState } from "react";

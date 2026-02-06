@@ -1,11 +1,12 @@
 import "./NewsCard.css";
 import saveIcon from "../../assets/saveicon.png";
-import saveIconBlk from "../../assets/Saveiconblk.png";
+import saveIconBlk from "../../assets/saveiconblk.png";
 import saveIconBlue from "../../assets/saveIconBlue.png";
 import deleteIcon from "../../assets/deleteIcon.png";
 import deleteIconHovered from "../../assets/deleteIconHovered.png";
 import { useState } from "react";
 import { formatDateForAPI } from "../../utils/dateApi";
+import { useLocation } from "react-router-dom";
 function NewsCard({
   article,
   isLoggedIn,
@@ -17,6 +18,7 @@ function NewsCard({
   const [isSaveHovered, setIsSaveHovered] = useState(false);
   const [isDeleteHovered, setIsDeleteHovered] = useState(false);
   const isSaved = savedArticles.some((saved) => saved.title === article.title);
+  const location = useLocation();
   const isOnSavedNews = location.pathname === "/saved-news";
 
   return (
