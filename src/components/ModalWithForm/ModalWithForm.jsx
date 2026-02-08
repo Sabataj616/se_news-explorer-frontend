@@ -22,7 +22,7 @@ function ModalWithForm({
         {isOpen && (
           <button
             type="button"
-            className="mobile__modal-close-btn"
+            className="modal__mobile-close-btn"
             onClick={closeActiveModal}
           />
         )}
@@ -30,7 +30,7 @@ function ModalWithForm({
         <form
           onSubmit={onSubmit}
           className="modal__form"
-          id="item-form"
+          id={activeModal === "log-in" ? "login-form" : "register-form"}
           noValidate
         >
           {children}

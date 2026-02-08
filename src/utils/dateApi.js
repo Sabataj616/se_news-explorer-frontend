@@ -8,7 +8,6 @@ export const formatDateForAPI = (dateString) => {
   return date.toLocaleDateString("en-US", options);
 };
 
-
 export const getDateRange = () => {
   const today = new Date();
   const weekAgo = new Date();

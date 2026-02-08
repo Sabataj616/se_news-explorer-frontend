@@ -1,10 +1,10 @@
-.about__container {
+.about {
   background-color: white;
   margin-left: -3.2rem;
   margin-right: -3.2rem;
   display: flex;
   padding: 80px;
-  height: 624px;
+  min-height: 624px;
 }
 
 .about__avatar {
@@ -14,7 +14,7 @@
   height: 100%;
 }
 
-.about-author__container {
+.about__author-container {
   display: flex;
   flex-direction: column;
   margin-left: 80px;
@@ -45,9 +45,9 @@
 }
 
 @media (max-width: 768px) {
-  .about__container {
+  .about {
     min-width: 280px;
-    max-height: 752px;
+    min-height: 752px;
     flex-direction: column;
 
     border-style: hidden;
@@ -61,10 +61,10 @@
     max-width: 90vw;
     max-height: 272px;
     width: 100%;
-    margin: 0;
+    margin-top: 12px;
   }
 
-  .about-author__container {
+  .about__author-container {
     margin-top: 24px;
     margin-left: 0;
     margin-right: 0;
@@ -84,7 +84,6 @@
     text-align: justify;
     max-width: 90vw;
 
-    margin-bottom: 8rem;
     font-size: 18px;
     line-height: 24px;
   }

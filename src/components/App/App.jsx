@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Main from "../Main/Main";
 import Header from "../Header/Header";
@@ -6,14 +6,14 @@ import Footer from "../Footer/Footer";
 import SavedNews from "../SavedNews/SavedNews";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
-import SuccessRegisterModal from "../../SuccessRegisterModal/SuccessRegisterModal";
+import SuccessRegisterModal from "../SuccessRegisterModal/SuccessRegisterModal";
 import SearchForm from "../SearchForm/SearchForm";
 import { setToken, getToken } from "../../utils/token";
 import CurrentUserContext from "../../context/CurrentUserContext";
 import { register } from "../../utils/auth";
 import { checkToken } from "../../utils/auth";
 import { saveArticle } from "../../utils/auth";
-import { getNews } from "../../utils/NewsApi";
+import ProtectedRoute from "../ProtectedRoutes";
 
 import "./App.css";
 
@@ -26,19 +26,20 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [articles, setArticles] = useState([]);
   const [foundResults, setFoundResults] = useState([]);
-  const [savedArticles, setSavedArticles] = useState([]);
+  const [savedArticles, setSavedArticles] = useState(() => {
+    const saved = localStorage.getItem("savedArticles");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [hasSearched, setHasSearched] = useState(false);
   const [loadingArticles, setLoadingArticles] = useState(false);
   const [keyword, setKeyword] = useState("");
-
+  const hasShownLoginModal = useRef(false);
   const [error, setError] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
   const [currentUser, setCurrentUser] = useState({
     name: "",
     email: "",
   });
-
-  const [formFilled] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -148,6 +149,13 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (location.state?.from && !isLoggedIn && !hasShownLoginModal.current) {
+      hasShownLoginModal.current = true;
+      setTimeout(() => setActiveModal("log-in"), 0);
+    }
+  }, [location, isLoggedIn]);
+  useEffect(() => {
+    if (!activeModal) return;
     const handleEscapeKey = (e) => {
       if (e.key === "Escape") {
         closeActiveModal();
@@ -167,13 +175,6 @@ function App() {
       document.removeEventListener("click", handleOverlayClick);
     };
   }, [activeModal]);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("savedArticles");
-    if (saved) {
-      setSavedArticles(JSON.parse(saved));
-    }
-  }, []);
 
   const onToggleModal = () => {
     if (activeModal === "log-in") {
@@ -237,13 +238,16 @@ function App() {
                 />
               }
             />
+
             <Route
               path="/saved-news"
               element={
-                <SavedNews
-                  savedArticles={savedArticles}
-                  handleRemoveArticle={handleRemoveArticle}
-                />
+                <ProtectedRoute isLoggedIn={isLoggedIn}>
+                  <SavedNews
+                    savedArticles={savedArticles}
+                    handleRemoveArticle={handleRemoveArticle}
+                  />
+                </ProtectedRoute>
               }
             />
           </Routes>

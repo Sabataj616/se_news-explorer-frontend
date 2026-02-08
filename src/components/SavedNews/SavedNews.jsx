@@ -10,15 +10,15 @@ function SavedNews({ savedArticles, handleRemoveArticle }) {
     ...new Set(savedArticles.map((article) => article.keyword)),
   ];
   return (
-    <div className="saved__container">
-      <div className="Upper">
-        <p className="upper__description">Saved articles</p>
-        <h1 className="upper__title">
+    <section className="saved">
+      <div className="saved__upper">
+        <p className="saved__upper-description">Saved articles</p>
+        <h2 className="saved__upper-title">
           {currentUser?.name || "User"}, you have {savedArticles?.length || 0}{" "}
           saved articles
-        </h1>
+        </h2>
 
-        <p className="keywords__text">
+        <p className="saved__keywords">
           By keywords:
           {uniqueKeywords.map((keyword, index) => (
             <span key={index}>
@@ -28,7 +28,7 @@ function SavedNews({ savedArticles, handleRemoveArticle }) {
           ))}
         </p>
       </div>
-      <div className="lower">
+      <div className="saved__lower">
         {savedArticles.map((article) => (
           <NewsCard
             key={article.title}
@@ -38,7 +38,7 @@ function SavedNews({ savedArticles, handleRemoveArticle }) {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

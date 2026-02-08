@@ -107,7 +107,6 @@ function RegisterModal({
         placeholder="Enter email address"
         required
         onChange={handleSignupChange}
-       
       />
       <span id="register-email-input-error" className="modal__error">
         {emailError}
@@ -124,7 +123,6 @@ function RegisterModal({
         placeholder="Enter password"
         required
         onChange={handleSignupChange}
-        
       />
       <span id="register-password-input-error" className="modal__error">
         {passwordError}
@@ -142,6 +140,11 @@ function RegisterModal({
         required
         onChange={handleSignupChange}
       />
+
+      <span id="sign-up-error" className="modal__error">
+        {" "}
+        {signupError}
+      </span>
     </ModalWithForm>
   );
 }

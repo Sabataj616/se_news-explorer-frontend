@@ -7,11 +7,7 @@ function SuccessRegisterModal({
   closeActiveModal,
 }) {
   return (
-    <div
-      className={`success__modal ${
-        isOpen && isSuccess ? "success__modal-opened" : ""
-      }`}
-    >
+    <div className={`success ${isOpen && isSuccess ? "success__opened" : ""}`}>
       <div className="success__modal-container">
         <button
           onClick={closeActiveModal}
@@ -21,7 +17,7 @@ function SuccessRegisterModal({
         {isOpen && (
           <button
             type="button"
-            className="mobile__modal-close-btn"
+            className="modal__mobile-close-btn"
             onClick={closeActiveModal}
           />
         )}

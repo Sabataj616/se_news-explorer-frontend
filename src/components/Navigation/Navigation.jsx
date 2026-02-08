@@ -1,6 +1,6 @@
 import "./Navigation.css";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/NewsExplorer.png";
+import Logo from "../../images/NewsExplorer.png";
 import { useLocation } from "react-router-dom";
 
 function Navigation({ isLoggedIn, closeDropdownMenu }) {

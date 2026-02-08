@@ -1,4 +1,4 @@
-.success__modal {
+.success {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -12,7 +12,7 @@
   z-index: 9999;
 }
 
-.success__modal-opened {
+.success__opened {
   visibility: visible;
 }
 
@@ -20,7 +20,7 @@
   position: absolute;
   top: -32px;
   right: -46px;
-  background-image: url(../../assets/back.png);
+  background-image: url(../../images/back.png);
   width: 40px;
   height: 40px;
   border: none;

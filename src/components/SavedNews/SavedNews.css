@@ -1,8 +1,8 @@
-.saved__container {
+.saved {
   min-height: 100vh;
 }
 
-.lower {
+.saved__lower {
   display: flex;
   gap: 3vw;
   margin-top: -80px;
@@ -12,7 +12,7 @@
   padding-bottom: 40px;
 }
 
-.Upper {
+.saved__upper {
   background-color: white;
   margin-right: -3.3rem;
   margin-left: -3.3rem;
@@ -22,7 +22,7 @@
   padding-right: 4.5rem;
 }
 
-.upper__description {
+.saved__upper-description {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 18px;
@@ -31,7 +31,7 @@
   padding-top: 28px;
 }
 
-.upper__title {
+.saved__upper-title {
   font-family: "Roboto Slab";
   font-weight: 400;
   font-size: 30px;
@@ -39,7 +39,7 @@
   max-width: 400px;
 }
 
-.keywords__text {
+.saved__keywords {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 18px;

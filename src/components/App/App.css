@@ -21,7 +21,7 @@ body {
 }
 
 .hero-section {
-  background-image: url("../../assets/background.png");
+  background-image: url("../../images/background.png");
   background-size: cover;
   background-position: center;
 
@@ -62,10 +62,9 @@ body {
   color: #2f71e5;
 }
 
-
 @media (max-width: 768px) {
   .hero-section {
-    background-image: url("../../assets/background-mobile.png");
+    background-image: url("../../images/background-mobile.png");
   }
 
   .page__hero {

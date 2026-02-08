@@ -1,4 +1,4 @@
-.footer__container {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +28,9 @@
   line-height: 24px;
 }
 
+.footer__home-btn:hover {
+  color: grey;
+}
 .footer__triple-ten-text {
   border: none;
   color: black;
@@ -39,6 +42,11 @@
   font-size: 18px;
   line-height: 24px;
 }
+
+.footer__triple-ten-text:hover {
+  color: grey;
+}
+
 .footer-text__container {
   margin-left: 102px;
 }
@@ -48,27 +56,44 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  padding-left: 5rem;
 }
 
-.home-and-tripleten__container {
+.footer__home-and-tripleten-container {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.logo__container {
+.footer__logo-container {
   display: flex;
   gap: 24px;
   align-items: center;
 }
 
-.footer-text__container {
+.footer__github-logo {
+  cursor: pointer;
+}
+
+.footer__github-logo:hover {
+  opacity: 0.7;
+}
+
+.footer__linkedin-logo {
+  cursor: pointer;
+}
+
+.footer__linkedin-logo:hover {
+  opacity: 0.7;
+}
+
+.footer__text-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 @media (max-width: 768px) {
-  .footer__container {
+  .footer {
     max-width: 768px;
     max-height: 752px;
 
@@ -88,7 +113,7 @@
     align-items: center;
   }
 
-  .home-and-tripleten__container {
+  .footer__home-and-tripleten-container {
     flex-direction: column;
     gap: 10px;
     margin-left: -133px;
@@ -97,7 +122,7 @@
   .footer__home-btn {
     margin-left: -26px;
   }
-  .footer-text__container {
+  .footer__text-container {
     max-width: 288px;
 
     margin-left: 0;
@@ -106,9 +131,10 @@
   .footer__text {
     max-width: 288px;
     max-height: 22px;
+    padding-left: 0;
   }
 
-  .logo__container {
+  .footer__logo-container {
     justify-content: space-between;
 
     margin-right: -140px;

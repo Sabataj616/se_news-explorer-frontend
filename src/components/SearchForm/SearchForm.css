@@ -1,4 +1,4 @@
-.search__container {
+.search {
   display: flex;
   align-items: center;
   padding: 2vh 0.1rem 1.5vh;
@@ -6,10 +6,9 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  
 }
 
-.search__container-hidden {
+.search__hidden {
   visibility: hidden;
 }
 .search__title {
@@ -47,9 +46,9 @@
   border-color: #d1d2d6;
   background-color: white;
   margin: 0;
-  padding: 0; 
-  display: flex; 
-  align-items: center; 
+  padding: 0;
+  display: flex;
+  align-items: center;
   height: 64px;
   position: relative;
   z-index: 11;
@@ -84,7 +83,11 @@
   line-height: 24px;
 }
 
-.error-message {
+.search__button:hover {
+  background-color: dodgerblue;
+}
+
+.search__error-message {
   color: #ff0000;
   font-family: "Inter";
   font-weight: 400;

@@ -1,13 +1,13 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/NewsExplorer.png";
+import Logo from "../../images/NewsExplorer.png";
 import Navigation from "../Navigation/Navigation";
-import hamburger from "../../assets/menu.png";
-import blkhamburger from "../../assets/blkhamburger.png";
-import logout from "../../assets/logout.png";
-import logoutblk from "../../assets/logoutblk.png";
-import Logoblk from "../../assets/NewsExplorerblk.png";
-import { useLocation } from "react-router-dom";
+import hamburger from "../../images/menu.png";
+import blkhamburger from "../../images/blkhamburger.png";
+import logout from "../../images/logout.png";
+import logoutblk from "../../images/logoutblk.png";
+import Logoblk from "../../images/NewsExplorerblk.png";
+
 import { useContext } from "react";
 import CurrentUserContext from "../../context/CurrentUserContext";
 
@@ -21,18 +21,16 @@ function Header({
   handleSignOut,
   isOnSavedNews,
 }) {
-  
-
   const currentUser = useContext(CurrentUserContext);
   return (
     <header
-    className={`header ${
-      isDropdownOpen 
-        ? "header--dropdown-version" 
-        : isOnSavedNews 
-        ? "header--saved-news" 
-        : ""
-    }`}
+      className={`header ${
+        isDropdownOpen
+          ? "header--dropdown-version"
+          : isOnSavedNews
+          ? "header--saved-news"
+          : ""
+      }`}
     >
       <Link to="/">
         <img
@@ -45,7 +43,7 @@ function Header({
         <button
           onClick={closeDropdownMenu}
           type="button"
-          className="menu__white-close-btn"
+          className="header__menu-white-close-btn"
         ></button>
       )}
       <div className="header__sign-in-container">

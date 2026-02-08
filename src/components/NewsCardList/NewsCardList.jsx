@@ -10,7 +10,7 @@ function NewsCardList({
   savedArticles,
 }) {
   return (
-    <div className="news-card-list">
+    <section className="news-card-list">
       {newsArticles.map((article) => (
         <NewsCard
           key={article.url}
@@ -22,7 +22,7 @@ function NewsCardList({
           savedArticles={savedArticles}
         />
       ))}
-    </div>
+    </section>
   );
 }
 export default NewsCardList;

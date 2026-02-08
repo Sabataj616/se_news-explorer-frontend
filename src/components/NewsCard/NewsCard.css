@@ -1,4 +1,4 @@
-.newscard__container {
+.newscard {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -47,7 +47,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 .newscard__content {
@@ -86,7 +86,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4; 
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 .newscard__source {
@@ -107,7 +107,7 @@
 }
 
 @media (max-width: 768px) {
-  .newscard__container {
+  .newscard {
     display: flex;
     flex-direction: column;
     max-width: 90vw;

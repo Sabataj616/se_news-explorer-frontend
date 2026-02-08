@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { getNews } from "../../utils/newsApi";
 import { getDateRange } from "../../utils/dateApi";
 import { useForm } from "../../hooks/useForm";
-import { useState } from "react";
 
 function SearchForm({
   onSearchResults,
@@ -14,12 +13,11 @@ function SearchForm({
 }) {
   const location = useLocation();
   const isOnSavedNews = location.pathname === "/saved-news";
-  const [searchPerformed, setSearchPerformed] = useState(false);
 
   const defaultValues = {
     keyword: "",
   };
-  const { values, handleChange, setValues } = useForm(defaultValues);
+  const { values, handleChange } = useForm(defaultValues);
   const handleSearchChange = (evt) => {
     handleChange(evt);
     setError("");
@@ -27,13 +25,13 @@ function SearchForm({
   const handleSearchSubmit = (evt) => {
     evt.preventDefault();
     setError("");
-    setSearchPerformed(true);
+
     setLoadingArticles(true);
     setHasSearched(true);
 
     if (!values.keyword.trim()) {
       setError("Please enter a keyword");
-      setSearchPerformed(false);
+
       setLoadingArticles(false);
       return;
     }
@@ -53,11 +51,7 @@ function SearchForm({
   };
 
   return (
-    <div
-      className={`search__container ${
-        isOnSavedNews ? "search__container-hidden" : ""
-      }`}
-    >
+    <div className={`search ${isOnSavedNews ? "search__hidden" : ""}`}>
       <h1 className="search__title">What's going on in the world?</h1>
       <p className="search__subtext">
         Find the latest news on any topic and save them in your personal
@@ -78,7 +72,7 @@ function SearchForm({
           Search
         </button>
       </form>
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="search__error-message">{error}</p>}
     </div>
   );
 }

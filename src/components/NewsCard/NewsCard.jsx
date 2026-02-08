@@ -1,9 +1,9 @@
 import "./NewsCard.css";
-import saveIcon from "../../assets/saveicon.png";
-import saveIconBlk from "../../assets/saveiconblk.png";
-import saveIconBlue from "../../assets/saveIconBlue.png";
-import deleteIcon from "../../assets/deleteIcon.png";
-import deleteIconHovered from "../../assets/deleteIconHovered.png";
+import saveIcon from "../../images/saveicon.png";
+import saveIconBlk from "../../images/saveiconblk.png";
+import saveIconBlue from "../../images/saveIconBlue.png";
+import deleteIcon from "../../images/deleteIcon.png";
+import deleteIconHovered from "../../images/deleteIconHovered.png";
 import { useState } from "react";
 import { formatDateForAPI } from "../../utils/dateApi";
 import { useLocation } from "react-router-dom";
@@ -22,7 +22,7 @@ function NewsCard({
   const isOnSavedNews = location.pathname === "/saved-news";
 
   return (
-    <div className="newscard__container">
+    <article className="newscard">
       <div className="newscard__top">
         <img
           src={article.urlToImage}
@@ -86,16 +86,16 @@ function NewsCard({
         </div>
       </div>
       <div className="newscard__content">
-        <h3 className="newscard__date">
+        <p className="newscard__date">
           {formatDateForAPI(article.publishedAt)}
-        </h3>
-        <h1 className="newscard__title">{article.title}</h1>
+        </p>
+        <h2 className="newscard__title">{article.title}</h2>
         <p className="newscard__description">{article.description}</p>
-        <h3 className="newscard__source">
+        <p className="newscard__source">
           {article.source?.name || "Unknown Source"}
-        </h3>
+        </p>
       </div>
-    </div>
+    </article>
   );
 }
 

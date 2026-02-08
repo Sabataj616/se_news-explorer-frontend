@@ -59,6 +59,10 @@
   cursor: pointer;
 }
 
+.header__sign-in-btn:hover {
+  color: darkgray;
+}
+
 .header__username-btn {
   display: flex;
   flex-direction: row-reverse;
@@ -85,6 +89,10 @@
   cursor: pointer;
 }
 
+.header__logout-btn:hover {
+  opacity: 0.2;
+}
+
 .header__menu-btn {
   display: none;
 }
@@ -96,7 +104,7 @@
   display: none;
 }
 
-.menu__white-close-btn {
+.header__menu-white-close-btn {
   display: none;
 }
 .header__dropdown-btn {
@@ -109,12 +117,11 @@
     max-width: 768px;
     min-height: 56px;
   }
-  
+
   .header__sign-in-container {
     display: none;
   }
 
-  
   .header__menu-btn {
     display: block;
     margin-right: 1rem;
@@ -122,9 +129,9 @@
     max-width: 24px;
     min-height: 24px;
   }
-  .menu__white-close-btn {
+  .header__menu-white-close-btn {
     display: block;
-    background-image: url(../../assets/back.png);
+    background-image: url(../../images/back.png);
     margin-right: 1rem;
     margin-top: -6px;
     max-width: 24px;

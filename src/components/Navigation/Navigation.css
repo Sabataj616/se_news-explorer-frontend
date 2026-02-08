@@ -10,11 +10,25 @@
   color: white;
   background: none;
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   font-family: "Roboto";
   font-size: 18px;
   line-height: 24px;
+}
+
+.navigation__home-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  top: 100%;
+  margin-top: 2.9vh;
+}
+.navigation__home-btn:hover {
+  color: grey;
 }
 
 .navigation__home-btn-black {
@@ -25,13 +39,29 @@
   color: white;
   background: none;
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   font-family: "Roboto";
   font-size: 18px;
   line-height: 24px;
 }
 
+.navigation__saved-articles-btn:hover {
+  color: grey;
+}
+
 .navigation__saved-articles-btn-black {
   color: black;
+}
+
+.navigation__saved-articles-btn-black::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  z-index: 1000;
+  left: 0;
+  top: 100%;
+  margin-top: 2.9vh;
 }
