@@ -1,0 +1,142 @@
+.search {
+  display: flex;
+  align-items: center;
+  padding: 2vh 0.1rem 1.5vh;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.search__hidden {
+  visibility: hidden;
+}
+.search__title {
+  color: #ffffff;
+  overflow-wrap: break-word;
+  width: 608px;
+
+  text-align: left;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: 0;
+  margin-top: 80px;
+}
+
+.search__subtext {
+  color: #ffffff;
+  margin-bottom: 5rem;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+  margin-top: -10px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search__form {
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d1d2d6;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  position: relative;
+  z-index: 11;
+  width: 608px;
+}
+.search__input {
+  width: 608px;
+  height: 64px;
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: 1.5rem;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.search__button {
+  color: white;
+  background-color: #2f71e5;
+  width: 168px;
+  height: 64px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  padding: 0;
+  margin-right: -1px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search__button:hover {
+  background-color: dodgerblue;
+}
+
+.search__error-message {
+  color: #ff0000;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .search__form {
+    flex-direction: column;
+    background-color: transparent;
+    border-style: hidden;
+    justify-content: center;
+  }
+  .search__input {
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d1d2d6;
+    background-color: white;
+    max-width: 90vw;
+    width: 288px;
+    margin: 0;
+    margin-bottom: 16px;
+    min-height: 56px;
+    padding-left: 16px;
+  }
+
+  .search__title {
+    max-width: 90vw;
+    height: 80px;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-top: 30px;
+  }
+
+  .search__subtext {
+    text-align: justify;
+    padding: 2rem;
+    margin-top: -42px;
+    margin-bottom: 8rem;
+    max-width: 90vw;
+    margin-left: -70px;
+  }
+  .search__button {
+    max-width: 90vw;
+    width: 288px;
+    margin: 0;
+    min-height: 56px;
+  }
+}

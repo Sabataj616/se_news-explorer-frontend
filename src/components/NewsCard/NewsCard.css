@@ -1,0 +1,135 @@
+.newscard {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+  height: 576px;
+
+  border: 1px;
+  border-radius: 15px;
+  background-color: white;
+  margin-top: 100px;
+}
+
+.newscard__top {
+  position: relative;
+}
+
+.newscard__image {
+  max-width: 400px;
+  height: 272px;
+
+  border-radius: 15px;
+}
+
+.newscard__save-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  max-width: 40px;
+  cursor: pointer;
+}
+
+.newscard__tooltip {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  position: absolute;
+  right: 60px;
+  top: 14%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 13px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+.newscard__content {
+  padding: 1rem;
+}
+
+.newscard__title {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  max-width: 352px;
+  max-height: 80px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.newscard__date {
+  max-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "SourceSans3";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  margin-top: -3px;
+}
+.newscard__description {
+  max-height: 80px;
+  max-width: 352px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.newscard__source {
+  max-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b6bcbf;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4;
+  position: absolute;
+  bottom: 1px;
+  left: 1rem;
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .newscard {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    min-height: 44px;
+    margin-bottom: -99px;
+  }
+
+  .newscard__content {
+    min-height: 440px;
+    padding: 1rem;
+    max-width: 90vw;
+  }
+
+  .newscard__source {
+    max-width: 258px;
+    height: 20px;
+    margin-top: -8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .newscard__image {
+    max-width: 288px;
+  }
+}

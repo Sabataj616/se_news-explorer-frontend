@@ -1,0 +1,143 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: white;
+  margin-left: -49px;
+  margin-right: -49px;
+  padding-bottom: 26px;
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 80px;
+}
+
+.footer__home-btn {
+  border: none;
+  color: black;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer__home-btn:hover {
+  color: grey;
+}
+.footer__triple-ten-text {
+  border: none;
+  color: black;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer__triple-ten-text:hover {
+  color: grey;
+}
+
+.footer-text__container {
+  margin-left: 102px;
+}
+.footer__text {
+  color: #b6bcbf;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 5rem;
+}
+
+.footer__home-and-tripleten-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__logo-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer__github-logo {
+  cursor: pointer;
+}
+
+.footer__github-logo:hover {
+  opacity: 0.7;
+}
+
+.footer__linkedin-logo {
+  cursor: pointer;
+}
+
+.footer__linkedin-logo:hover {
+  opacity: 0.7;
+}
+
+.footer__text-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .footer {
+    max-width: 768px;
+    max-height: 752px;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .footer__top {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .footer__home-and-tripleten-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: -133px;
+  }
+
+  .footer__home-btn {
+    margin-left: -26px;
+  }
+  .footer__text-container {
+    max-width: 288px;
+
+    margin-left: 0;
+  }
+
+  .footer__text {
+    max-width: 288px;
+    max-height: 22px;
+    padding-left: 0;
+  }
+
+  .footer__logo-container {
+    justify-content: space-between;
+
+    margin-right: -140px;
+    margin-top: -70px;
+  }
+}
